@@ -1,20 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//Importamos los componentes que deseamos cargar en la aplicación
 import { AppComponent } from './app.component';
 import { SignupComponent } from './component/signup/signup.component';
-import { FooterComponent } from './component/footer/footer.component';
 
+
+
+//importamos el sistema de rutas para poderlos utilizar en la aplicación
+import { routing, appRoutingProviders } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
-    FooterComponent
+    SignupComponent
+   
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

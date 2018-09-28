@@ -1,0 +1,69 @@
+/* Estilos para cada uno de los componentes de la aplicación*/
+
+body{
+  background: #fafafa;
+}
+/* Estilos Para el contenedor Principal*/
+#main-container{
+  margin: 20px auto;
+}
+
+/*Estilos Para el logotipo o imagen que se mostrará al lado de los formularios */
+
+
+/*Estilos Para el píe de página de nuesta aplicación*/
+
+.site-footer{
+  text-transform: uppercase;
+  color: grey;
+}
+
+/*Estilos Para el título de la aplicación que se mostrará en los formularios*/
+
+.signup-box .title{
+  color: #239B56;
+  font-family:'OleoScript';
+  font-weight: bold;
+  font-size: 40px;
+ 
+}
+
+/*Estilos Para los formularios de regístro e ingreso a la aplicación*/
+
+.signup-form{
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+/*Estilos Para la descripción que se muestra en el formulario de regístro*/
+.signup-form .description{
+  color:#7F8C8D;
+  font-size: 1.2em;
+  text-align: justify;
+  font-family: 'Montserrat';
+}
+
+/*Estilos Para las cajas donde está el formulario de regístro y el link a el formulario de ingreso*/
+
+.login-box,
+.signup-box{
+background-color: white;
+border: 1px solid #edeeee !important;
+border-radius: 7px 0px 7px 0px;
+color: #7F8C8D;
+padding: 10px 0px;
+text-align-last: center;
+width: 100%;
+}
+
+.signup-form .btn-signup{
+  background: #239B56   !important;
+  margin-top: 15px;
+  width: 150px !important;
+ 
+}
+
+.signup-form .btn-signup:hover{
+ background: #17A589 !important;
+}

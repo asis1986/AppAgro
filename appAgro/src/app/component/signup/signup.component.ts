@@ -9,9 +9,11 @@ import {Component, OnInit } from '@angular/core';
 
 export class SignupComponent implements OnInit{
 public title: string;
+public descripcion: string;
 
 constructor(){
   this.title = 'AgroSoft'
+ 
 }
 
 ngOnInit(){
