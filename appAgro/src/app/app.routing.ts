@@ -5,6 +5,7 @@ import {ModuleWithProviders} from '@angular/core';
 
 // importamos los componentes a los cuales deseamos crearles una ruta
 import { SignupComponent } from './component/signup/signup.component';
+import {SigninComponent} from './component/signin/signin.component';
 
 
 
@@ -13,7 +14,8 @@ import { SignupComponent } from './component/signup/signup.component';
 const appRoutes: Routes = [
   {path: '', component: SignupComponent},
   {path: 'signup', component: SignupComponent},
-  {path: '**', component: SignupComponent},
+  {path: 'signin', component: SigninComponent}
+  {path: '**', component: SignupComponent}
 ];
 
 
