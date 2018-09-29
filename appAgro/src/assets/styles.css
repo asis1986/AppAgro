@@ -10,7 +10,18 @@ body{
 
 /*Estilos Para el logotipo o imagen que se mostrará al lado de los formularios */
 
-
+.logo{
+  max-width: 100% !important;
+  height: 577px !important;
+  margin-top:5px;
+}
+.img-box{
+  background-color: white;
+  border:1px solid #edeeee !important;
+  border-radius: 7px 0px 7px 0px;
+  margin: 0px;
+  padding: 0px;
+}
 /*Estilos Para el píe de página de nuesta aplicación*/
 
 .site-footer{
