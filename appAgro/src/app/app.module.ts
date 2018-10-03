@@ -9,12 +9,14 @@ import {SigninComponent}  from './component/signin/signin.component';
 
 //importamos el sistema de rutas para poderlos utilizar en la aplicación
 import { routing, appRoutingProviders } from './app.routing';
+import { HomePageComponent } from './component/homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    HomePageComponent
  
   ],
   imports: [
