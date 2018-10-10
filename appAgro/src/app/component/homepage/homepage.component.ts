@@ -1,18 +1,22 @@
 import { Component} from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'homepage',
-  templateUrl: './homepage.component.html'
+  templateUrl: './homepage.component.html',
+  providers:[UserService]
 })
 export class HomePageComponent  {
   public title:string;
+  public identity;
 
-  constructor() { 
+  constructor(private _userService:UserService) { 
     this.title = 'Agrosoft';
   }
 
   ngOnInit() { 
-    console.log('componente de la homepage cargado');
+    this.identity = this._userService.getIdentity();
+    console.log(this.identity)
   }
 
 }

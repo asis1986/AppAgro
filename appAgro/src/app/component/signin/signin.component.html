@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container landing">
   <div class="row">
     <div class="col s10 push-s1">
       <!--Caja para la imagen o logotipo-->
@@ -13,7 +13,7 @@
           <div class="row">
             <div class="signup-box">
               <h1 class="title">{{title}}</h1>
-              <form class="signup-form">
+              <form #signinForm="ngForm" (ngSubmit) = "onSubmit(signinForm)" class="signup-form">
                 <h2 class="description">
                   {{text_description}}
                 </h2>
@@ -22,10 +22,21 @@
                 <div class="section">
                   
                   
-                  <input type="text" name="data" placeholder="Correo Electrónico o Nombre de Usuario">
-                  <input type="password" surname="password" placeholder="Contraseña">
+                  <input type="email" name="email" #email="ngModel"[(ngModel)] = 'user.email' 
+                  placeholder="Correo Electrónico" class="form-control" required>
 
-                  <button  class=" btn waves-effect waves-light btn-signup">{{sesion}}</button>
+                      <span *ngIf="!email.valid && email.touched">
+                          Este campo es requerido!!!
+                      </span>
+                  
+                  <input type="password" name="password" #password = "ngModel"[(ngModel)] = 'user.password'
+                  placeholder="Contraseña" class="form-control" required>
+                      <span *ngIf="!password.valid && password.touched">
+                        Este campo es requerido!!!
+                      </span>
+               
+                    <button class=" btn waves-effect waves-light btn-signup " >{{sesion}}</button>
+              
                 </div>
               </form>
               <div class="restet">
@@ -36,7 +47,7 @@
           </div>
           <div class="row">
             <div class="login-box">
-              ¿ No Tienes Una cuenta?<a href="#">Regístrate</a>
+              ¿ No Tienes Una cuenta?<a [routerLink]="['/signup']">Regístrate</a>
             </div>
           </div>
         </div>

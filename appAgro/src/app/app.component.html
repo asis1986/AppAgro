@@ -1,5 +1,35 @@
 
 <!--Contenedor principal de la página-->
+<div class="navbar-fixed ">
+  <nav class="header">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo logoLink">{{title}}</a>
+      <ul class=" link right hide-on-med-and-down" *ngIf="!identity">
+        <li><a [routerLink]="['/signup']">Regístrate</a></li>
+        <li><a [routerLink]="['/signin']">Ingresar</a></li>
+        
+      </ul>
+
+        <ul class="right hide-on-med-and-down link " *ngIf="identity">
+       <li class="avatar">
+         <!--Cargar avatar de usuaro-->
+       </li>
+       <li >
+         <a class="dropdown dropdown-toggle">
+        {{identity.name}} {{identity.surname}}
+         </a>
+       </li>
+      
+      </ul>
+
+        <ul class=" right hide-on-med-and-down  link " *ngIf="identity">
+        <li><a [routerLink]="['/homepage']">Inicio</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
 <section id="main-container">
  <!--Utilizando la directiva Router-outlet podremos cargar cualquier componente de la aplicación-->
  <router-outlet></router-outlet>

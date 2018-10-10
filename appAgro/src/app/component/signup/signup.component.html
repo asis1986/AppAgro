@@ -1,4 +1,4 @@
-
+<!--Contenedor principal de la página-->
 <div class="container landing">
   <div class="row">
     <div class="col s10 push-s1 ">
@@ -8,13 +8,24 @@
           <img src="../../../assets/public/logo.png" class=" logo" alt="Image">
    
         </div>
-        <!--Caja para el formulario de regístro-->
+       
 
+        <!--Mensaje de registro exitoso-->
+        <div class="alert alert-success" *ngIf="status=='success'">
+          <i class="fa fa-check-circle"></i>Regístro Exitoso!!
+          <a [routerLink]="['/signin']">Ingresar</a>
+        </div>
+        <!--Mensaje de error de regístro-->
+        <div class="alert alert-success" *ngIf="status=='success'">
+          <i class="fa fa-check-circle"></i>Regístro Exitoso!!
+          
+        </div>
         <div class="col s12 m7">
           <div class="row">
             <div class="signup-box">
               <h1 class="title">{{title}}</h1>
-              <form class="signup-form">
+              <!--Formulario de regístro-->
+              <form #signupForm ="ngForm" (ngSubmit) ="onSubmit(signupForm)" class="signup-form" >
                 <h2 class="description">
                   Regístrate para que puedas monitorear fechas, estado de suelo
                   y de esta forma tomar mejores desiciones en los proceso de tus cultivos.
@@ -22,22 +33,33 @@
                 <div class="divider"></div>
                 <!--Seccion para los campos del formulario-->
                 <div class="section">
-                  <input type="text" name="name" placeholder="Nombre">
-                  <input type="text" surname="surname" placeholder="Apellido">
-                  <input type="text" surname="nick" placeholder="Nombre de Usuario">
-                  <input type="email" surname="email" placeholder="CorreoElectrónico">
-                  <input type="password" surname="password" placeholder="Contraseña">
+                  <input type="text" name="name"  #name ="ngModel"[(ngModel)]='user.name' placeholder="Nombre" 
+                  class="form-control" required>
+                  <div><span *ngIf="!name.valid && name.touched">Este Campo es requerido</span></div>
 
-                  <button  class=" btn waves-effect waves-light btn-signup">Regístrate</button>
+                  <input type="text" name="surname"  #surname="ngModel"[(ngModel)]='user.surname' placeholder="Apellido"
+                  class="form-control" required>
+
+                  <div><span *ngIf="!surname.valid && surname.touched">Este Campo es requerido</span></div>
+
+                  <input type="text" name="nick" #username="ngModel"[(ngModel)]='user.username' placeholder="Nombre de Usuario"
+                  class="form-control" required>
+                  
+                    <div> <span *ngIf="!username.valid && username.touched"> Este campo es requerido</span></div>
+                  
+                  <input type="email" name="email" #email="ngModel"[(ngModel)]='user.email' placeholder="CorreoElectrónico" required>
+                  
+                  <div><span *ngIf="!email.valid && email.touched">Este campo es requerido</span></div>
+                
+                  <input type="password" name="password" #password = "ngModel"[(ngModel)]='user.password' placeholder="Contraseña" required>
+
+                    <div> <span *ngIf="!password.valid && password.touched">Este campo es requerido</span></div>
+
+                  <button class=" btn waves-effect waves-light btn-signup">Regístrate</button>
                 </div>
               </form>
             </div>
            
-          </div>
-          <div class="row">
-            <div class="login-box">
-              ¿Tienes Una cuenta?<a href="#">Ingresar</a>
-            </div>
           </div>
         </div>
       </div>
