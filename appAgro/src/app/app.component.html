@@ -3,32 +3,48 @@
 <div class="navbar-fixed ">
   <nav class="header">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo logoLink">{{title}}</a>
-      <ul class=" link right hide-on-med-and-down" *ngIf="!identity">
-        <li><a [routerLink]="['/signup']">Regístrate</a></li>
-        <li><a [routerLink]="['/signin']">Ingresar</a></li>
-        
-      </ul>
+      <div class="container">
+        <div class="row">
+          <!--Caja que contiene el título de la página-->
+          <div class="col s12 m6">
+            <a href="#!" class="brand-logo logoLink">{{title}}</a>
+          </div>
 
-        <ul class="right hide-on-med-and-down link " *ngIf="identity">
-       <li class="avatar">
-         <!--Cargar avatar de usuaro-->
-       </li>
-       <li >
-         <a class="dropdown dropdown-toggle">
-        {{identity.name}} {{identity.surname}}
-         </a>
-       </li>
-      
-      </ul>
+          <!--Caja que contiene la navegación para dispositivos grandes-->
+          <div class="navbar" [align]="'right'">
+          
+                <ul class=" link hide-on-med-and-down " *ngIf="identity">
+                  <li><a [routerLink]="['/signup']">Regístrate</a></li>
+                  <li><a [routerLink]="['/signin']">Ingresar</a></li>
+                
+                </ul>
+           
+          </div>
 
-        <ul class=" right hide-on-med-and-down  link " *ngIf="identity">
-        <li><a [routerLink]="['/homepage']">Inicio</a></li>
-        
-      </ul>
+          <!--Botón tipo dropdown para cuando el tamaño de la pantalla es de moviles-->
+          <div class="s2 m6 hide-on-med-and-up " [align]="'right'">
+            <a class="btn btn-large btn-flat btn-dropdown-button" mz-button id="btn-dropdown-demo" href="#">
+             Usuario
+            </a>
+            <mz-dropdown [id]="'dropdown-demo'" [belowOrigin]="false" [constrainWidth]="true" [dropdownButtonId]="'btn-dropdown-demo'"
+              [gutter]="true" [hover]="true" [inDuration]="300" [outDuration]="300" [stopPropagation]="true">
+              <mz-dropdown-item><a href="#!">Regístrate</a></mz-dropdown-item>
+              <mz-dropdown-divider></mz-dropdown-divider>
+              <mz-dropdown-item><a href="#!">Ingresa</a></mz-dropdown-item>
+          
+          
+            </mz-dropdown>
+          
+          </div>
+
+        </div>
+      </div>
     </div>
+      
   </nav>
-</div>
+    
+  </div>
+
 
 <section id="main-container">
  <!--Utilizando la directiva Router-outlet podremos cargar cualquier componente de la aplicación-->

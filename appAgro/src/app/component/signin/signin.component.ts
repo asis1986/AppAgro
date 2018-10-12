@@ -18,7 +18,7 @@ export class SigninComponent {
   constructor(private _route: ActivatedRoute, private _router: Router, private _userService: UserService) {
     this.title = 'Ingresa Aquí';
     this.text_description = 'Bienvenido señor usuario, puede iniciar sesión llenando los campos';
-    this.sesion = 'Inicia Sesión';
+    this.sesion = 'Ingresar';
     this.user = new User (null , '' , '' , '' , '' , '' , '' , '');
   }
 

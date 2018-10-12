@@ -13,7 +13,7 @@ export class AppComponent implements OnInit, DoCheck{
 
 
   constructor( private _userService: UserService){
-    this.title = 'Agrosoft';
+    this.title = 'AGROSOFT';
   }
 
   ngOnInit(){

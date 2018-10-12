@@ -33,8 +33,7 @@ body{
 
 .title{
   color: #1d951b;
-  font-family:'OleoScript';
-  font-weight: bold;
+  font-family:'Oleo Script';
   font-size: 40px;
  
 }
@@ -72,6 +71,7 @@ width: 100%;
   background: #1d951b  !important;
   margin-top: 30px;
   width: 150px !important;
+  font-family: 'Oleo Script';
  
 }
 
@@ -88,14 +88,13 @@ width: 100%;
 }
 
 .link  a{
-  font-family: 'Montserrat';
-  font-weight: bold;
-  size: 1.5em;
+  font-family: 'Oleo Script';
+  font-size: 1.2em;
 }
 
  .logoLink {
    color: white;
-  font-family:'OleoScript';
+  font-family:'Oleo Script';
   font-weight: bold;
   font-size: 40px;
 }

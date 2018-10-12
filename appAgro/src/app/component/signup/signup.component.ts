@@ -26,7 +26,7 @@ constructor(
   private _userService: UserService
 ){
   //asignación de valores a varibles 
-  this.title = 'AgroSoft';
+  this.title = 'Regístrate Aquí';
   this.user = new User("","","","","","User","","");
 
  
