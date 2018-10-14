@@ -3,8 +3,8 @@
 import { Injectable } from '@angular/core'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { User} from '../models/user';
-import { GLOBAL} from './global';
+import { User } from '../models/user';
+import { GLOBAL } from './global';
 
 
 @Injectable()
@@ -12,9 +12,11 @@ import { GLOBAL} from './global';
 export class UserService{
   public url:string;
   public identity;
+  public urlweahter;
 
   constructor(public _http: HttpClient){
     this.url = GLOBAL.url
+    this.urlweahter = GLOBAL.urlweahter;
   }
 
   // método para enviar peticiones  ajax, en este caso se envian
@@ -49,5 +51,14 @@ getIdentity(){
 
   return this.identity;
 }
+
+
+//método para mostrar estadísticas con una api de prueba
+  dailyForcast(): Observable<any> {
+ return this._http.get(this.urlweahter);
+
+  }
+
+
 
 }

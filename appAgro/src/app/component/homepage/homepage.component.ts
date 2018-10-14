@@ -11,7 +11,7 @@ export class HomePageComponent  {
   public identity;
 
   constructor(private _userService:UserService) { 
-    this.title = 'Agrosoft';
+    this.title = 'Bienvenido a Agrosoft';
   }
 
   ngOnInit() { 

@@ -85,6 +85,7 @@ width: 100%;
   background-color: #1d951b !important;
   padding-left: 50px;
   padding-right: 50px;
+  padding-top: 0px;
 }
 
 .link  a{
@@ -97,4 +98,34 @@ width: 100%;
   font-family:'Oleo Script';
   font-weight: bold;
   font-size: 40px;
+}
+
+
+
+
+.btn-box .boton{
+  background: #1d951b;
+ height: 54px;
+ float: right;
+ width: 65px;
+ line-height: 150px;
+ margin-right: -35px;
+ padding-top: -7px;
+ padding-right: -3px;
+ 
+
+}
+
+.boton-box .boton{
+   background: #1d951b;
+   font-family: 'Oleo Script';
+   font-size: 12px;
+  height: 54px;
+  width: 100px;
+  margin-right: -35px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  
 }

@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MzButtonModule } from 'ngx-materialize'
-import { MzDropdownModule } from 'ngx-materialize'
+
 //import { HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -11,20 +9,35 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './component/signup/signup.component';
 import {SigninComponent} from './component/signin/signin.component';
+import { HomePageComponent } from './component/homepage/homepage.component';
+import { StatisticsComponent } from './component/statistics/statistics.component';
+import { MydataComponent } from './component/mydata/mydata.component';
+import { UserAdminComponent} from './component/useradmin/useradmin.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+//componentes de Materialize css
 import { MzNavbarModule } from 'ngx-materialize';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MzCollapsibleModule } from 'ngx-materialize'
+import { MzCollapsibleModule } from 'ngx-materialize';
+import { MzIconModule} from 'ngx-materialize';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MzButtonModule } from 'ngx-materialize';
+import { MzDropdownModule } from 'ngx-materialize';
+
 
 // importamos el sistema de rutas para poderlos utilizar en la aplicación
 import { routing, appRoutingProviders } from './app.routing';
-import { HomePageComponent } from './component/homepage/homepage.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     SigninComponent,
-    HomePageComponent
+    HomePageComponent,
+    StatisticsComponent,
+    MydataComponent,
+    UserAdminComponent
  
   ],
   imports: [
@@ -37,7 +50,9 @@ import { HomePageComponent } from './component/homepage/homepage.component';
     MzNavbarModule,
     MzDropdownModule,
     ReactiveFormsModule,
-    MzCollapsibleModule 
+    MzCollapsibleModule ,
+    MzIconModule,
+    NoopAnimationsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
