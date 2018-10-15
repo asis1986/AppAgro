@@ -13,44 +13,64 @@
           <!--Caja que contiene la navegación para dispositivos grandes-->
           <div class="navbar" [align]="'right'">
           
-                <ul class=" link hide-on-med-and-down " *ngIf="!identity">
-                  <li><a [routerLink]="['/signup']">Regístrate</a></li>
-                  <li><a [routerLink]="['/signin']">Ingresar</a></li>
+                <ul class=" link hide-on-med-and-down  " *ngIf="!identity">
+                  <li><a class="line" [routerLink]="['/signup']">Regístrate</a></li>
+                  <li><a class="line" [routerLink]="['/signin']">Ingresar</a></li>
+                  <li><a class="line" [routerLink]="['/home']">Inicio</a></li>
                 
                 </ul>
            
           </div>
 
           <!--Botón tipo dropdown para cuando el tamaño de la pantalla es de moviles-->
-          <div class="s2 m6 hide-on-med-and-up btn-box" [align]="'right'">
-            <a class="btn btn-large btn-flat boton " mz-button id="btn-dropdown-demo" href="#" *ngIf="!identity">
-                <i mz-icon [align]="'right'" [align]="'right'"  [icon]="'apps'" [size]="'30px'"></i>
-            </a>
-              <mz-dropdown [id]="'dropdown-demo'"  [belowOrigin]="false" [constrainWidth]="true" [dropdownButtonId]="'btn-dropdown-demo'"
-              [gutter]="true" [hover]="true" [inDuration]="300" [outDuration]="300" [stopPropagation]="true">
-              <mz-dropdown-item><a [routerLink]="['/signup']">Regístrate</a></mz-dropdown-item>
-              <mz-dropdown-divider></mz-dropdown-divider>
-              <mz-dropdown-item><a [routerLink]="['/signin']">Ingresar</a></mz-dropdown-item>
-            </mz-dropdown>
+         
+          <div class=" col s2 push-s10  m6 push-m6 hide-on-med-and-up btn-box" [align]="'right'">
+            <ul>
+              <li>
+                <a class="btn btn-large btn-flat boton " mz-button id="btn-dropdown-demo" href="#" *ngIf="!identity">
+                  <i mz-icon [align]="'right'" [align]="'right'" [icon]="'menu'" [size]="'40px'"></i>
+                </a>
+                <mz-dropdown [id]="'dropdown-demo'" [belowOrigin]="false" [constrainWidth]="true" [dropdownButtonId]="'btn-dropdown-demo'"
+                  [gutter]="true" [hover]="true" [inDuration]="300" [outDuration]="300" [stopPropagation]="true">
+                  <mz-dropdown-item><a [routerLink]="['/signup']">Regístrate</a></mz-dropdown-item>
+                  <mz-dropdown-divider></mz-dropdown-divider>
+                  <mz-dropdown-item><a [routerLink]="['/signin']">Ingresar</a></mz-dropdown-item>
+                  <mz-dropdown-item><a [routerLink]="['/home']">Inicio</a></mz-dropdown-item>
+                </mz-dropdown>
+              </li>
+            </ul>
+            
           
           </div>
 
 <!--Botón tipo dropdown que se mostrará cuando el usuario tenga una sesión-->
 
-          <div class=" boton-box" [align]="'right'">
-            <a class="btn btn-large btn-flat boton " mz-button id="btn-dropdown-user" href="#" *ngIf="identity">
-              {{identity.username}}<i class="material-icons right">arrow_drop_down</i>
+          <div class=" col s2 push-s10 m6 push-m6 boton-box" [align]="'right'">
+            <ul class="link hide-on-med-and-down" *ngIf="identity">
+              <li>
+                <a>Avatar</a>
+              </li>
+            </ul>
 
-            </a>
-            <mz-dropdown [id]="'dropdown-user'" [belowOrigin]="false" [constrainWidth]="true" [dropdownButtonId]="'btn-dropdown-user'"
-              [gutter]="true" [hover]="true" [inDuration]="300" [outDuration]="300" [stopPropagation]="true">
-              <mz-dropdown-item><a [routerLink]="['/home']">Inicio</a></mz-dropdown-item>
-              <mz-dropdown-item><a [routerLink]="['/mydata']">Mi Info</a></mz-dropdown-item>             
-              <mz-dropdown-item><a [routerLink]="['/statistics']">Estadística</a></mz-dropdown-item>
-              <mz-dropdown-item><a href="#">Salir</a></mz-dropdown-item>
-            </mz-dropdown>
+            <ul *ngIf="identity">
+              <li>
+                <a class="btn btn-large btn-flat boton " mz-button id="btn-dropdown-user" href="#" >
+                    {{identity.name}}<i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <mz-dropdown [id]="'dropdown-user'" [belowOrigin]="false" [constrainWidth]="true" [dropdownButtonId]="'btn-dropdown-user'"
+                  [gutter]="true" [hover]="true" [inDuration]="300" [outDuration]="300" [stopPropagation]="true">
+                  <mz-dropdown-item><a [routerLink]="['/home']">Inicio</a></mz-dropdown-item>
+                  <mz-dropdown-item><a [routerLink]="['/mydata']">Mis datos</a></mz-dropdown-item>
+                  <mz-dropdown-item><a [routerLink]="['/statistics']">Estadística</a></mz-dropdown-item>
+                  <mz-dropdown-item><a class="pointer" (click)="logout()">Salir</a></mz-dropdown-item>
+                </mz-dropdown>
+              </li>
+            
+            </ul>
+            
           
           </div>
+          
 
         </div>
       </div>

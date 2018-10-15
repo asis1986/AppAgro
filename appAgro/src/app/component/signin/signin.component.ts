@@ -53,5 +53,6 @@ export class SigninComponent {
       }
     );
   
+    this._router.navigate(['/']);
   }
 }

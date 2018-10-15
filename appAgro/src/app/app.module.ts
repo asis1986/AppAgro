@@ -19,7 +19,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MzNavbarModule } from 'ngx-materialize';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MzCollapsibleModule } from 'ngx-materialize';
-import { MzIconModule} from 'ngx-materialize';
+import { MzIconModule, MzIconMdiModule } from 'ngx-materialize'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MzButtonModule } from 'ngx-materialize';
 import { MzDropdownModule } from 'ngx-materialize';
@@ -52,6 +52,7 @@ import { routing, appRoutingProviders } from './app.routing';
     ReactiveFormsModule,
     MzCollapsibleModule ,
     MzIconModule,
+    MzIconMdiModule,
     NoopAnimationsModule
   ],
   providers: [appRoutingProviders],

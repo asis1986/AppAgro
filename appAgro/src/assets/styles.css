@@ -27,6 +27,7 @@ body{
 .site-footer{
   text-transform: uppercase;
   color: grey;
+  margin-top: -30px;
 }
 
 /*Estilos Para el título de la aplicación que se mostrará en los formularios*/
@@ -86,7 +87,9 @@ width: 100%;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 0px;
+ 
 }
+
 
 .link  a{
   font-family: 'Oleo Script';
@@ -103,29 +106,49 @@ width: 100%;
 
 
 
-.btn-box .boton{
-  background: #1d951b;
- height: 54px;
- float: right;
- width: 65px;
- line-height: 150px;
- margin-right: -35px;
- padding-top: -7px;
- padding-right: -3px;
- 
-
-}
 
 .boton-box .boton{
    background: #1d951b;
+   box-shadow: none;
+   border-left: 1px solid #edeeee;
+   border-right: 1px solid #edeeee;
    font-family: 'Oleo Script';
    font-size: 12px;
-  height: 54px;
-  width: 100px;
-  margin-right: -35px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-
+  height: 50px;
+  width: 140px;
+  line-height: 50px;
+  margin-right: -72px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
   
+}
+
+.btn-box .boton {
+  background: #1d951b;
+  box-shadow: none;
+  border-left: 1px solid #edeeee;
+  border-right: 1px solid #edeeee;
+  font-family: 'Oleo Script';
+  font-size: 12px;
+  height: 50px;
+  width: 100px;
+  line-height: 50px;
+  margin-right: -52px;
+  padding-left: 45px;
+  padding-right: 45px;
+  text-align: left;
+
+}
+
+
+
+.boton-box .boton i{
+  padding: -20px
+}
+
+/* salir */
+
+.pointer{
+  cursor:pointer;
 }
